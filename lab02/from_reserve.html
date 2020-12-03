@@ -6,7 +6,7 @@
     <title>Form demo</title>
 </head>
 <body>
- <h3>Form Demo</h3>
+ <h1>Hotel Booking</h1>
  <form method="POST" action="https://angsila.cs.buu.ac.th/~wittawas/632/88726059/lab02/afile.php">
 
     <table>
@@ -42,8 +42,8 @@
             <label for="Name">Name</label>
         </td>
         <td>
-            <input type="text" name="fame" id="fame">
-            <input type="text" name="lname" id="lname">
+            <input type="text" name="fame" id="fame" size="21">
+            <input type="text" name="lname" id="lname" size="21">
         </td>
     </tr>
     <tr>
@@ -51,19 +51,53 @@
             <label for="email">Email</label>
         </td>
         <td>
-            <input type="text" name="email" id="email">
+            <input type="text" name="email" id="email" size="48">
         </td>
     </tr>
-
+    <tr>
+        <td>
+            <label for="arrival">Arrival</label>
+        </td>
+        <td>
+            <input type="date" id="arrivaldate" name="arrivaldate">
+            <input type="time" id="arrivaltime" name="arrivaltime">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="departure">Departure</label>
+        </td>
+        <td>
+            <input type="date" id="departuredate" name="departuredate">
+            <input type="time" id="departuretime" name="departuretime">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="free pickup">Free Pickup</label>
+        </td>
+        <td>
+            <input type="radio" name="pickup" id="pickup" value="Yes">Yes, Sure!<br>
+            <input type="radio" name="pickup" id="pickup" value="No">No, I already rented a car.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="flightnum">Flight Number</label>
+        </td>
+        <td>
+            <input type="text" name="flightnum" id="flightnum" size="48">
+        </td>
+    </tr>
     <tr>
         <td>Other requests</td>
         <td><Textarea name="otherreq" id="otherreq" rows="5" cols="50"></Textarea></td>
     </tr>
     <tr>
-        <th colspan="2">
-            <input type="submit" value="Send">
-            <input type="reset" value="Clear">
-        </th>
+        <td></td>
+        <td>
+            <input type="submit" value="Complete Reservation">
+        </td>
     </tr>
 </table>
 </form>
