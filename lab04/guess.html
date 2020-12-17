@@ -10,22 +10,24 @@
         rn = Math.floor(Math.random()*100);
         document.write(rn);
         function check(n) {
-            div = document.getElementById('result');
-            div.innerHTML = "";
+            result = document.getElementById('result');
+            result.innerHTML = "";
             if (n < rn) {
-                div.innerHTML = "น้อยไป"
+                result.innerHTML = "น้อยไป"
             }
             else if (n > rn) {
-                div.innerHTML = "มากไป"
+                result.innerHTML = "มากไป"
             }
             else {
-                div.innerHTML = "ถูกต้อง"
+                result.innerHTML = "ถูกต้อง"
             }
+            hist = document.getElementById('hist');
             
         }
     </script>
-    <input type="text" id="n"  placeholder="?" >
+    <input type="text" id="n" placeholder="?" >
     <button onclick="check(n.value)">Try it</button>
+    <div id="hist"></div>
     <div id="result"></div>
 </body>
 </html>
