@@ -1,7 +1,20 @@
 <script>
     rn = Math.floor(Math.random()*100);
     document.write(rn);
-    function test(n) {
-
+    function check(n) {
+        div = document.getElementById('disp');
+        div.innerHTML = "";
+        if (n < rn) {
+            div.innerHTML += "Less"
+        }
+        else if (n > rn) {
+            div.innerHTML += "Greater"
+        }
+        else {
+            div.innerHTML += "Equal"
+        }
     }
 </script>
+<input type="text" onkeyup="check(this.value);">
+<div id="disp"></div>
+
