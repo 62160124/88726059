@@ -1,9 +1,19 @@
-<script>
-    function answer(n){
-        div = document.getElementById('disp');
-        div.innerHTML = "Hello " + n;
-    }
-</script>
-
-<input type="text" onkeyup="answer(this.value);">
-<div id="disp"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function answer(n){
+            div = document.getElementById('disp');
+            div.innerHTML = "Hello " + n;
+        }
+    </script>
+    
+    <input type="text" onkeyup="answer(this.value);">
+    <div id="disp"></div>
+</body>
+</html>
