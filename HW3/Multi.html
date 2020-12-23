@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
     <script>
- 
-        function multi(n) {
     
+        function multi(n) {
+
             div = document.getElementById('disp');
             div.innerHTML = "";
             for (i = 1; i <= 12; i++) {
@@ -17,9 +16,11 @@
             }
         }
     </script>
-    
     <input type="text" onkeyup="multi(this.value);">
     <div id="disp"></div>
     <button onclick="getElementById('disp').innerHTML='';">Clear div</button>
+
+<body>
+
 </body>
 </html>
