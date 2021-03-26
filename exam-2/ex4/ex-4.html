@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        <h2>ผู้แต่ง</h2><hr>
+        <p id="show"></p>
+    </div>
+    
+
+<script>
+
+var xmlhttp, authors, i, txt = "";
+xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function(){
+    if(this.readyState == 4 && this.status == 200){
+        var authors = JSON.parse(this.responseText);
+        for (i in authors) {
+            txt += "รหัส: " + authors[i].authorID +"<br>" +
+             "ชื่อ: " +  authors[i].author +"<br>"+
+             "นามปากกา: "+  authors[i].penname + "<br>" +
+             "<hr>";
+        }
+        document.getElementById("show").innerHTML = txt;
+    }  
+};
+xmlhttp.open("get", "authors.php", true);
+xmlhttp.send();
+
+</script>
+
+</body>
+</html>

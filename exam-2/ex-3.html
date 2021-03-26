@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    authors = [];
+    count = 1;
+
+    function add(aID, a, pen){
+        aID = document.getElementById('authorID').value
+        author = document.getElementById('author').value
+        pen = document.getElementById('penname').value
+
+        authors.push({aID, author, pen});
+
+        str = JSON.stringify(authors);
+
+        localStorage.setItem("authors", str);
+        
+        document.getElementById("disp").innerHTML = " ";
+
+        for(i=0; i<=count; i++){
+            document.getElementById("disp").innerHTML += "รหัส: "+authors[i].aID+"<br>";
+            document.getElementById("disp").innerHTML += "ชื่อ: "+authors[i].author+"<br>";
+            document.getElementById("disp").innerHTML += "นามปากกา: "+authors[i].pen+"<br>";
+            document.getElementById("disp").innerHTML += "______________________"+"<br>";
+        }
+        count++;
+    }
+
+    function show(){
+        str = localStorage.getItem("authors");
+        str = JSON.parse(str);
+
+        for(i=0; i<=str.length; i++){
+            document.getElementById("disp").innerHTML += "รหัส: "+str[i].aID+"<br>";
+            document.getElementById("disp").innerHTML += "ชื่อ: "+str[i].author+"<br>";
+            document.getElementById("disp").innerHTML += "นามปากกา: "+str[i].pen+"<br>";
+            document.getElementById("disp").innerHTML += "______________________"+"<br>";
+    }
+}
+</script>
+<body onpageshow="show()">
+    <form>
+    <b>ผู้แต่ง</b><br>
+    <a>______________________</a><br>
+    <a>รหัสผู้แต่ง</a><br>
+    <input type="text" id="authorID"></br>
+    <a>ชื่อผู้แต่ง</a><br>
+    <input type="text" id="author"></br>
+    <a>นามปากกา</a><br>
+    <input type="text" id="penname"></br>
+    
+    <button onclick="add(this.value, this.value, this.value);" id="authorID" id="author" id="penname" type="reset" value="reset">Save</button><br>
+    <a>______________________</a><br>
+    <div id="disp"></div>
+    
+    </form>
+</body>
+</html>

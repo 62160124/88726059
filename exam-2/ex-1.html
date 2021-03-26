@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+    function show(){
+        var authors = [
+            { authorID: 1111, author: 'wittawas', penname: 'witty100' },
+            { authorID: 1112, author: 'jakkarin', penname: 'พ่อบ้านใจกล้า' },
+            { authorID: 1113, author: 'worawit', penname: 'obob' }];
+            document.getElementById("disp").innerHTML += "<b>ผู้แต่ง</b>"+"<br>";
+            document.getElementById("disp").innerHTML += "______________________"+"<br>";
+            for(i=0; i<authors.length; i++){
+                document.getElementById("disp").innerHTML += "รหัส: "+authors[i].authorID+"<br>";
+                document.getElementById("disp").innerHTML += "ชื่อ: "+authors[i].author+"<br>";
+                document.getElementById("disp").innerHTML += "นามปากกา: "+authors[i].penname+"<br>";
+                document.getElementById("disp").innerHTML += "______________________"+"<br>";
+            }
+    }
+</script>
+
+<body onpageshow="show()">
+    <div id="disp"></div>
+</body>
+</html>

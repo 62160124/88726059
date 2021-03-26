@@ -1,0 +1,29 @@
+#firstname{
+    color:red
+}
+body {
+    background-color: rgb(36, 153, 192);
+  }
+  
+h3 {
+    color: white;
+    text-align: center;
+}
+a{
+    font-size: 12px;
+    font-family: Tahoma;
+}
+  
+p {
+    font-family: verdana;
+    font-size: 20px;
+    color:white;
+    background-color: black(255, 255, 255);
+}
+.bgt {
+    background-color:pink;
+}
+div{
+    font-size: 16px;
+    color:rgb(255, 255, 255);
+}

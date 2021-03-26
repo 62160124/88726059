@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="Style.css">
+</head>
+    <script>
+        function Cal(money,choice){
+            div = document.getElementById('disp');
+            div.innerHTML = "";
+            console.log(money);
+            console.log(choice);
+            switch(choice){
+                case "1":
+                    moneyTransfer = 309.66;
+                    sum = money*moneyTransfer;
+                    console.log(sum);
+                    div.innerHTML = (money + " บาท = " + sum.toFixed(2) + " กีบลาว (LAK)<br/>");
+                break;
+                case "2":
+                    moneyTransfer = 44.30;
+                    sum = money*moneyTransfer;
+                    console.log(sum);
+                    div.innerHTML = (money + " บาท = " + sum.toFixed(2) + " จ๊าดพม่า (MMK)<br/>");
+                break;
+                case "3":
+                    moneyTransfer = 767.27;
+                    sum = money*moneyTransfer;
+                    console.log(sum);
+                    div.innerHTML = (money + " บาท = " + sum.toFixed(2) + " ดงเวียดนาม (VND)<br/>");
+                break;
+                case "4":
+                    moneyTransfer = 0.044;
+                    sum = money*moneyTransfer;
+                    console.log(sum);
+                    div.innerHTML = (money + " บาท = " + sum.toFixed(2) + " ดอลลาร์สิงคโปร์ (SGD)<br/>");
+                break;
+                case "5":
+                    moneyTransfer = 0.043;
+                    sum = money*moneyTransfer;
+                    console.log(sum);
+                    div.innerHTML = (money + " บาท = " + sum.toFixed(2) + " ดอลลาร์ออสเตรเลีย (AUD)<br/>");
+                break;
+                case "6":
+                    moneyTransfer = 0.13;
+                    sum = money*moneyTransfer;
+                    console.log(sum);
+                    div.innerHTML = (money + " บาท = " + sum.toFixed(2) + " ดอลลาร์ฮ่องกง (HKD)<br/>");
+                break;
+                case "7":
+                    moneyTransfer = 0.93;
+                    sum = money*moneyTransfer;
+                    console.log(sum);
+                    div.innerHTML = (money + " บาท = " + sum.toFixed(2) + " ดอลลาร์ไต้หวันใหม่ (TWD)<br/>");
+                break;
+                case "8":
+                    moneyTransfer = 0.024;
+                    sum = money*moneyTransfer;
+                    console.log(sum);
+                    div.innerHTML = (money + " บาท = " + sum.toFixed(2) + " ปอนด์ (GBP)<br/>");
+                break;
+                case "9":
+                    moneyTransfer = 0.027;
+                    sum = money*moneyTransfer;
+                    console.log(sum);
+                    div.innerHTML = (money + " บาท = " + sum.toFixed(2) + " ยูโร (EUR)<br/>");
+                break;
+                case "10":
+                    moneyTransfer = 0.13;
+                    sum = money*moneyTransfer;
+                    console.log(sum);
+                    div.innerHTML = (money + " บาท = " + sum.toFixed(2) + " ริงกิตมาเลเซีย (MYR)<br/>");
+                break;
+                case "11":
+                    moneyTransfer = 0.033;
+                    sum = money*moneyTransfer;
+                    console.log(sum);
+                    div.innerHTML = (money + " บาท = " + sum.toFixed(2) + " ดอลลาร์สหรัฐ (USD)<br/>");
+                break;
+                case "12":
+                    moneyTransfer = 36.79;
+                    sum = money*moneyTransfer;
+                    console.log(sum);
+                    div.innerHTML = (money + " บาท = " + sum.toFixed(2) + " เงินวอนเกาหลี (KRW)<br/>");
+                break;
+                case "13":
+                    moneyTransfer = 2.43;
+                    sum = money*moneyTransfer;
+                    console.log(sum);
+                    div.innerHTML = (money + " บาท = " + sum.toFixed(2) + " เงินรูปีของอินเดีย (INR)<br/>");
+                break;
+                case "14":
+                    moneyTransfer = 3.45;
+                    sum = money*moneyTransfer;
+                    console.log(sum);
+                    div.innerHTML = (money + " บาท = " + sum.toFixed(2) + " เงินเยนของญี่ปุ่น (JPY)<br/>");
+                break;
+            }
+        }
+    </script>
+<body>
+<table width="500" border="0" align="center">
+    <tr>
+      <td colspan="2">
+      <div align="center"><h3>โปรแกรมคำนวณอัตราแลกเปลี่ยนเงินตราต่างประเทศ</h3></div></td>
+    </tr>
+    <tr>
+      <td width="150"><div align="right">จำนวนเงิน : </div></td>
+      <td width="212"><div><input type="text" id="money" size="20" maxlength="100" />  บาทไทย (THB) </div></td>
+    </tr>     
+    <tr>
+      <td width="150"><div align="right">เลือกสกุลเงิน : </div></td>
+      <td width="212"><select id="coin" >
+                <option value="1" >กีบลาว (LAK)</option>
+                <option value="2" >จ๊าดพม่า (MMK)</option>
+                <option value="3" >ดงเวียดนาม (VND)</option>
+                <option value="4" >ดอลลาร์สิงคโปร์ (SGD)</option>
+                <option value="5" >ดอลลาร์ออสเตรเลีย (AUD)</option>
+                <option value="6" >ดอลลาร์ฮ่องกง (HKD)</option>
+                <option value="7" >ดอลลาร์ไต้หวันใหม่ (TWD)</option>
+                <option value="8" >ปอนด์ (GBP)</option>
+                <option value="9" >ยูโร (EUR)</option>
+                <option value="10" >ริงกิตมาเลเซีย (MYR)</option>
+                <option value="11" >ดอลลาร์สหรัฐ (USD)</option>
+                <option value="12" >เงินวอนเกาหลี (KRW)</option>
+                <option value="13" >เงินรูปีของอินเดีย (INR)</option>
+                <option value="14" >เงินเยนของญี่ปุ่น (JPY)</option>                 
+              </select></td>
+    </tr>  
+    <tr>
+      <td colspan="2"> <div align="center"><button onclick="Cal(money.value,coin.value)"> คำนวณ </button></div></td>
+    </tr>
+    <tr>
+        <td colspan="3"> <div align="center" id="disp"></div></td>
+    </tr>   
+  </table>
+</body>
+</html>

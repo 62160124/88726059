@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <script>
+        function Calculate(money){
+            div = document.getElementById('disp');
+            div.innerHTML = "";
+            if (money >= 1000){
+                ses = money%1000;
+                money1000 = money - ses;
+                amount1000 = money1000/1000;
+                money = money - (amount1000*1000);
+                div.innerHTML += ("แบงค์ 1000 : " + amount1000 + " ใบ<br/>");
+                console.log(money);
+            }else {
+                div.innerHTML += ("แบงค์ 1000 : <br/>");
+            }
+            if (money >= 500){
+                ses = money%500;
+                money500 = money - ses;
+                amount500 = money500/500;
+                money = money - (amount500*500);
+                div.innerHTML += ("แบงค์ 500 : " + amount500 + " ใบ<br/>");
+                console.log(money);
+            }else {
+                div.innerHTML += ("แบงค์ 500 : <br/>");
+            }
+            if (money >= 100){
+                ses = money%100;
+                money100 = money - ses;
+                amount100 = money100/100;
+                money = money - (amount100*100);
+                div.innerHTML += ("แบงค์ 100 : " + amount100 + " ใบ<br/>");
+                console.log(money);
+            }else {
+                div.innerHTML += ("แบงค์ 100 : <br/>");
+            }
+            if (money >= 50){
+                ses = money%50;
+                money50 = money - ses;
+                amount50 = money50/50;
+                money = money - (amount50*50);
+                div.innerHTML += ("แบงค์ 50 : " + amount50 + " ใบ<br/>");
+                console.log(money);
+            }else {
+                div.innerHTML += ("แบงค์ 50 : <br/>");
+            }
+            if (money >= 20){
+                ses = money%20;
+                money20 = money - ses;
+                amount20 = money20/20;
+                money = money - (amount20*20);
+                div.innerHTML += ("แบงค์ 20 : " + amount20 + " ใบ<br/>");
+                console.log(money);
+            }else {
+                div.innerHTML += ("แบงค์ 20 : <br/>");
+            }
+            if (money >= 10){
+                ses = money%10;
+                money10 = money - ses;
+                amount10 = money10/10;
+                money = money - (amount10*10);
+                div.innerHTML += ("เหรียญ 10 บาท : " + amount10 + " เหรียญ<br/>");
+                console.log(money);
+            }else {
+                div.innerHTML += ("เหรียญ 10 บาท : <br/>");
+            }
+            if (money >= 5){
+                ses = money%5;
+                money5 = money - ses;
+                amount5 = money5/5;
+                money = money - (amount5*5);
+                div.innerHTML += ("เหรียญ 5 บาท : " + amount5 + " เหรียญ<br/>");
+                console.log(money);
+            }else {
+                div.innerHTML += ("เหรียญ 5 บาท : <br/>");
+            }
+            if (money >= 2){
+                ses = money%2;
+                money2 = money - ses;
+                amount2 = money2/2;
+                money = money - (amount2*2);
+                div.innerHTML += ("เหรียญ 2 บาท : " + amount2 + " เหรียญ<br/>");
+                console.log(money);
+            }else {
+                div.innerHTML += ("เหรียญ 2 บาท : <br/>");
+            }
+            if (money >= 1){
+                ses = money%1;
+                money1 = money - ses;
+                amount1 = money1/1;
+                money = money - (amount1*1);
+                div.innerHTML += ("เหรียญ 1 บาท : " + amount1 + " เหรียญ<br/>");
+                console.log(money);
+            }else {
+                div.innerHTML += ("เหรียญ 1 บาท : <br/>");
+            }
+            
+        }
+    </script>
+    <input type="text" id="num" placeholder="จำนวนเงิน">
+    <button onclick="Calculate(num.value)"> Convert </button><br>
+    <div id="disp"></div>
+<body>
+    
+</body>
+</html>

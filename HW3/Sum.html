@@ -1,25 +1,36 @@
-<script>
-    function Sum(F,L) {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <script>
+        function Sum(F,L) {
 
-        div = document.getElementById('disp');
-        div.innerHTML = "";
-        sum = 0;
-        for (i = (F*1); i <= (L*1); i++) {
-            if(i < L){
-                div.innerHTML += i + " + ";
-            }else{
-                div.innerHTML += i + " = ";
-            }
-            sum = sum + i;
-            if( i == L){
-                div.innerHTML += sum;
+            div = document.getElementById('disp');
+            div.innerHTML = "";
+            sum = 0;
+            for (i = (F*1); i <= (L*1); i++) {
+                if(i < L){
+                    div.innerHTML += i + " + ";
+                }else{
+                    div.innerHTML += i + " = ";
+                }
+                sum = sum + i;
+                if( i == L){
+                    div.innerHTML += sum;
+                }
             }
         }
-    }
-</script>
+    </script>
 
-<input type="text" id="Fnum">
-<b>-</b>
-<input type="text" id="Lnum">
-<button onclick="Sum(Fnum.value,Lnum.value)">Summary</button>
-<div id="disp"></div>
+    <input type="text" id="Fnum">
+    <b>-</b>
+    <input type="text" id="Lnum">
+    <button onclick="Sum(Fnum.value,Lnum.value)">Summary</button>
+    <div id="disp"></div>
+<body>
+    
+</body>
+</html>
